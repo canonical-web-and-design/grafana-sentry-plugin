@@ -6,4 +6,6 @@ export declare class ChangeMyNameQueryCtrl extends QueryCtrl {
     defaults: {};
     /** @ngInject **/
     constructor($scope: any, $injector: any, templateSrv: any);
+    getOptions(query: any): any;
+    onChangeInternal(): void;
 }

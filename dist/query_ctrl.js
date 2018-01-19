@@ -25,7 +25,15 @@ System.register(['lodash', 'app/plugins/sdk', './css/query_editor.css!'], functi
                     this.templateSrv = templateSrv;
                     this.defaults = {};
                     lodash_1.default.defaultsDeep(this.target, this.defaults);
+                    this.target.target = this.target.target || 'select metric';
+                    this.target.type = this.target.type || 'timeserie';
                 }
+                ChangeMyNameQueryCtrl.prototype.getOptions = function (query) {
+                    return this.datasource.metricFindQuery(query || '');
+                };
+                ChangeMyNameQueryCtrl.prototype.onChangeInternal = function () {
+                    this.panelCtrl.refresh(); // Asks the panel to refresh data.
+                };
                 ChangeMyNameQueryCtrl.templateUrl = 'partials/query.editor.html';
                 return ChangeMyNameQueryCtrl;
             })(sdk_1.QueryCtrl);

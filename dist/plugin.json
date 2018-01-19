@@ -19,7 +19,7 @@
       {"name": "Apache License", "url": "https://github.com/yourorg/your-datasource/blob/master/LICENSE"}
     ],
     "version": "0.0.1",
-    "updated": "2017-09-17"
+    "updated": "2017-09-28"
   },
 
   "dependencies": {

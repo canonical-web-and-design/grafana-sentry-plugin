@@ -15,5 +15,16 @@ export class ChangeMyNameQueryCtrl extends QueryCtrl {
     super($scope, $injector);
 
     _.defaultsDeep(this.target, this.defaults);
+
+    this.target.target = this.target.target || 'select metric';
+    this.target.type = this.target.type || 'timeserie';
+  }
+
+  getOptions(query) {
+    return this.datasource.metricFindQuery(query || '');
+  }
+
+  onChangeInternal() {
+    this.panelCtrl.refresh(); // Asks the panel to refresh data.
   }
 }
