@@ -8,7 +8,7 @@
     "test": "./node_modules/karma/bin/karma start"
   },
   "author": "Grafana Labs",
-  "license": "GPL",
+  "license": "Apache",
   "dependencies": {
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
