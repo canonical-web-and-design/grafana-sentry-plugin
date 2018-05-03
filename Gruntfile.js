@@ -1,9 +1,12 @@
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
+  var pkgJson = require('./package.json');
+
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-typescript');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-string-replace');
 
   grunt.initConfig({
     clean: ['dist'],
@@ -61,6 +64,26 @@ module.exports = function(grunt) {
       }
     },
 
+    'string-replace': {
+      dist: {
+        files: [{
+          cwd: 'src',
+          expand: true,
+          src: ["**/plugin.json"],
+          dest: 'dist'
+        }],
+        options: {
+          replacements: [{
+            pattern: '%VERSION%',
+            replacement: pkgJson.version
+          },{
+            pattern: '%TODAY%',
+            replacement: '<%= grunt.template.today("yyyy-mm-dd") %>'
+          }]
+        }
+      }
+    },
+
     watch: {
       files: ['src/**/*.ts', 'src/**/*.html', 'src/**/*.css', 'src/img/*.*', 'src/plugin.json', 'README.md'],
       tasks: ['default'],
@@ -77,6 +100,7 @@ module.exports = function(grunt) {
     'copy:dist_html',
     'copy:dist_css',
     'copy:dist_img',
-    'copy:dist_statics'
+    'copy:dist_statics',
+    'string-replace'
   ]);
 };
