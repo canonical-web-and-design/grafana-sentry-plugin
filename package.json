@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Sentry plugin",
   "scripts": {
-    "build": "grunt; sudo systemctl restart grafana-server",
+    "build": "grunt; sudo systemctl restart grafana-server.service",
     "watch": "grunt watch",
     "test": "./node_modules/karma/bin/karma start"
   },
