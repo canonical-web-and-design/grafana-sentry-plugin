@@ -1,8 +1,12 @@
 ///<reference path="../node_modules/grafana-sdk-mocks/app/headers/common.d.ts" />
-System.register([], function(exports_1) {
+System.register(['./modules/api'], function(exports_1) {
+    var api_1;
     var ChangeMyNameDatasource;
     return {
-        setters:[],
+        setters:[
+            function (api_1_1) {
+                api_1 = api_1_1;
+            }],
         execute: function() {
             ChangeMyNameDatasource = (function () {
                 /** @ngInject */
@@ -13,6 +17,7 @@ System.register([], function(exports_1) {
                     console.log(instanceSettings);
                     this.name = instanceSettings.name;
                     this.id = instanceSettings.id;
+                    this.requests = new api_1.default(instanceSettings.jsonData.url, instanceSettings.jsonData.organization, instanceSettings.jsonData.project, instanceSettings.jsonData.token);
                 }
                 ChangeMyNameDatasource.prototype.query = function (options) {
                     throw new Error("Query Support not implemented yet.");
@@ -24,6 +29,7 @@ System.register([], function(exports_1) {
                     throw new Error("Template Variable Support not implemented yet.");
                 };
                 ChangeMyNameDatasource.prototype.testDatasource = function () {
+                    this.requests.getIssues().then(function (value) { console.log(value); });
                     return this.$q.when({
                         status: 'error',
                         message: 'Data Source is just a template and has not been implemented yet.',

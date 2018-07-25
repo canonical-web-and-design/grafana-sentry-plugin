@@ -10,8 +10,10 @@
   "author": "Canonical Webteam",
   "license": "Apache",
   "dependencies": {
+    "@types/whatwg-fetch": "^0.0.33",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
+    "node-fetch": "^2.2.0",
     "q": "^1.5.0",
     "systemjs": "^0.19.47"
   },
@@ -35,7 +37,6 @@
     "mocha": "^5.1.1",
     "plugin-typescript": "^7.1.0",
     "sinon": "^3.2.1",
-    "systemjs-plugin-css": "^0.1.35",
-    "load-grunt-tasks": "^3.5.2"
+    "systemjs-plugin-css": "^0.1.35"
   }
 }
