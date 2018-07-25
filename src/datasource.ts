@@ -2,6 +2,7 @@
 
 import _ from 'lodash';
 import Requests from './modules/api'
+import Issues from './modules/Issues';
 
 export default class ChangeMyNameDatasource {
   id: number;

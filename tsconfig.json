@@ -8,12 +8,12 @@
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "noImplicitAny": false,
-      "lib": [
-        "es2017",
-        "dom"
-        ]
+      "lib": ["dom"]
   },
   "exclude": [
       "node_modules"
+  ],
+  "include": [
+    "node_modules/moment/moment.d.ts"
   ]
 }
