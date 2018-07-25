@@ -3,10 +3,35 @@
 <div class="gf-form-group">
 	<div class="gf-form-inline">
 		<div class="gf-form">
-			<span class="gf-form-label width-9">Example Field</span>
-			<input class="gf-form-input width-30" type="text" ng-model='ctrl.current.jsonData.exampleField' placeholder="help the user by giving them a hint."></input>
+			<span class="gf-form-label width-9">Sentry's URL</span>
+			<input class="gf-form-input width-30" type="text" ng-model='ctrl.current.jsonData.exampleField' placeholder="https://sentry.io"></input>
       <info-popover mode="right-absolute">
-          <p>Write some helpful text here, describing what possible values the field could have and where to find more information if needed.</p>
+          <p>By default: sentry.io, but you can provide another URL if you host your own sentry's instance.</p>
+      </info-popover>
+    </div>
+
+    <div class="gf-form">
+      <span class="gf-form-label width-9">Sentry's token</span>
+			<input class="gf-form-input width-30" type="text" ng-model='ctrl.current.jsonData.exampleField' placeholder="stpezuraiexmockmxesj"></input>
+      <info-popover mode="right-absolute">
+          <!-- TODO show how to get token -->
+          <p>To call the API we need to get the token. It can be found in ...</p>
+      </info-popover>
+    </div>
+
+    <div class="gf-form">
+      <span class="gf-form-label width-9">Sentry's Organization</span>
+			<input class="gf-form-input width-30" type="text" ng-model='ctrl.current.jsonData.exampleField' placeholder="Sentry's Organization"></input>
+      <info-popover mode="right-absolute">
+          <p>Sentry organization </p>
+      </info-popover>
+    </div>
+
+    <div class="gf-form">
+      <span class="gf-form-label width-9">Sentry's Project</span>
+			<input class="gf-form-input width-30" type="text" ng-model='ctrl.current.jsonData.exampleField' placeholder="Sentry's project."></input>
+      <info-popover mode="right-absolute">
+          <p>Project to watch</p>
       </info-popover>
     </div>
   </div>
