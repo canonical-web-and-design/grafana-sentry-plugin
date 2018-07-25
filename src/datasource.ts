@@ -1,16 +1,21 @@
 ///<reference path="../node_modules/grafana-sdk-mocks/app/headers/common.d.ts" />
 
 import _ from 'lodash';
+import Requests from './modules/api'
 
 export default class ChangeMyNameDatasource {
   id: number;
   name: string;
+  requests: Requests;
 
   /** @ngInject */
   constructor(instanceSettings, private backendSrv, private templateSrv, private $q) {
     console.log(instanceSettings);
     this.name = instanceSettings.name;
     this.id = instanceSettings.id;
+
+    this.requests = new Requests(
+      instanceSettings.jsonData.url, instanceSettings.jsonData.organization, instanceSettings.jsonData.project, instanceSettings.jsonData.token);
   }
 
   query(options) {
@@ -26,6 +31,7 @@ export default class ChangeMyNameDatasource {
   }
 
   testDatasource() {
+    this.requests.getIssues().then(value => { console.log(value) })
     return this.$q.when({
       status: 'error',
       message: 'Data Source is just a template and has not been implemented yet.',
