@@ -6,7 +6,7 @@ System.register([], function(exports_1) {
             Requests = (function () {
                 function Requests(sentryUrl, organizationName, projectName, token) {
                     this.token = token;
-                    this.apiUrl = "http://0.0.0.0:9000/" + sentryUrl + "/api/0/projects/";
+                    this.apiUrl = "http://0.0.0.0:5000/?token=" + token;
                 }
                 Requests.prototype.request = function () {
                     var xhttp = new XMLHttpRequest();

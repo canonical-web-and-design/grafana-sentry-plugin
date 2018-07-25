@@ -4,7 +4,7 @@ export default class Requests {
   
     constructor(sentryUrl: string, organizationName: string, projectName: string, token: string) {
         this.token = token;
-        this.apiUrl = `http://0.0.0.0:9000/${sentryUrl}/api/0/projects/`;
+        this.apiUrl = `http://0.0.0.0:5000/?token=${token}`;
     }
   
     private request() {
