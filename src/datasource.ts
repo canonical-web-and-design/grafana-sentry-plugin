@@ -8,6 +8,7 @@ export default class ChangeMyNameDatasource {
 
   /** @ngInject */
   constructor(instanceSettings, private backendSrv, private templateSrv, private $q) {
+    console.log(instanceSettings);
     this.name = instanceSettings.name;
     this.id = instanceSettings.id;
   }

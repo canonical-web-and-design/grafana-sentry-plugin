@@ -10,6 +10,7 @@ System.register([], function(exports_1) {
                     this.backendSrv = backendSrv;
                     this.templateSrv = templateSrv;
                     this.$q = $q;
+                    console.log(instanceSettings);
                     this.name = instanceSettings.name;
                     this.id = instanceSettings.id;
                 }
