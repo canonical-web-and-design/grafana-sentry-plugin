@@ -13,7 +13,6 @@ System.register(["moment"], function(exports_1) {
                 }
                 Issues.prototype.query = function (query) {
                     console.log(moment);
-                    var request = new XMLHttpRequest();
                     var start = query.range.from;
                     var end = query.range.to;
                     return true;

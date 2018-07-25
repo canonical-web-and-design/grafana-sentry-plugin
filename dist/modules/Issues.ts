@@ -13,7 +13,6 @@ export default class Issues {
     query(query:QueryRequestObj):boolean {
         console.log(moment);
 
-        const request = new XMLHttpRequest();
         const start = query.range.from;
         const end = query.range.to;
 

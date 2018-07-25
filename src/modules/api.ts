@@ -4,14 +4,13 @@ export default class Requests {
   
     constructor(sentryUrl: string, organizationName: string, projectName: string, token: string) {
         this.token = token;
-        this.apiUrl = `${sentryUrl}/api/0/project/${organizationName}/${projectName}/issues`
+        this.apiUrl = `http://0.0.0.0:9000/${sentryUrl}/api/0/projects/`;
     }
   
     private request() {
         var xhttp = new XMLHttpRequest();
         xhttp.open("GET", this.apiUrl);
-        xhttp.setRequestHeader("Authorization", this.token);
-        xhttp.withCredentials = true;
+        xhttp.setRequestHeader("Authorization", `Bearer ${this.token}`);
         return new Promise(
             function(resolve, reject) {
                 xhttp.onload = function() {
