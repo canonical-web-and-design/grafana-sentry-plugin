@@ -1,25 +1,25 @@
 {
   "type": "datasource",
-  "name": "Change My Name",
-  "id": "orgname-pluginname-datasource",
+  "name": "Sentry",
+  "id": "canonical-sentry-datasource",
 
   "info": {
-    "description": "Description of plugin",
+    "description": "Get data from sentry",
     "author": {
-      "name": "Your name or the company name",
-      "url": "optional url"
+      "name": "Canonical Ltd",
+      "url": "https://canonical.com"
     },
-    "keywords": ["searchable", "key", "words"],
+    "keywords": ["sentry", "data", "sentryio"],
     "logos": {
-      "small": "img/your_logo.png",
-      "large": "img/your_logo.png"
+      "small": "img/logo.png",
+      "large": "img/logo.png"
     },
     "links": [
-      {"name": "Project site", "url": "https://github.com/yourorg/your-datasource"},
-      {"name": "Apache License", "url": "https://github.com/yourorg/your-datasource/blob/master/LICENSE"}
+      {"name": "Project site", "url": "https://github.com/canonical-webteam/grafana-sentry-plugin"},
+      {"name": "Apache License", "url": "https://github.com/canonical-webteam/grafana-sentry-plugin/blob/master/LICENSE"}
     ],
     "version": "0.0.1",
-    "updated": "2017-09-28"
+    "updated": "2018-07-25"
   },
 
   "dependencies": {

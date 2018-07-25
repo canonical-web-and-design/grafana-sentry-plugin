@@ -11,8 +11,8 @@
     },
     "keywords": ["sentry", "data", "sentryio"],
     "logos": {
-      "small": "img/your_logo.png",
-      "large": "img/your_logo.png"
+      "small": "img/logo.png",
+      "large": "img/logo.png"
     },
     "links": [
       {"name": "Project site", "url": "https://github.com/canonical-webteam/grafana-sentry-plugin"},
